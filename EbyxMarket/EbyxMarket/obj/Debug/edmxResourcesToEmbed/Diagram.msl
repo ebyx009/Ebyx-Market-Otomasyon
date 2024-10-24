@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ebyxMarket1ModelStoreContainer" CdmEntityContainer="ebyxMarket1Entities">
+    <EntitySetMapping Name="TBLCalisans">
+      <EntityTypeMapping TypeName="ebyxMarket1Model.TBLCalisan">
+        <MappingFragment StoreEntitySet="TBLCalisan">
+          <ScalarProperty Name="calisanKonum" ColumnName="calisanKonum" />
+          <ScalarProperty Name="calisanTelNo" ColumnName="calisanTelNo" />
+          <ScalarProperty Name="calisanYas" ColumnName="calisanYas" />
+          <ScalarProperty Name="calisanSoyad" ColumnName="calisanSoyad" />
+          <ScalarProperty Name="calisanAd" ColumnName="calisanAd" />
+          <ScalarProperty Name="calisanID" ColumnName="calisanID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKategoris">
+      <EntityTypeMapping TypeName="ebyxMarket1Model.TBLKategori">
+        <MappingFragment StoreEntitySet="TBLKategori">
+          <ScalarProperty Name="kategoriAd" ColumnName="kategoriAd" />
+          <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLKullanicis">
+      <EntityTypeMapping TypeName="ebyxMarket1Model.TBLKullanici">
+        <MappingFragment StoreEntitySet="TBLKullanici">
+          <ScalarProperty Name="kullaniciSifre" ColumnName="kullaniciSifre" />
+          <ScalarProperty Name="kullaniciAd" ColumnName="kullaniciAd" />
+          <ScalarProperty Name="kullaniciID" ColumnName="kullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLUruns">
+      <EntityTypeMapping TypeName="ebyxMarket1Model.TBLUrun">
+        <MappingFragment StoreEntitySet="TBLUrun">
+          <ScalarProperty Name="kategoriAd" ColumnName="kategoriAd" />
+          <ScalarProperty Name="urunFiyat" ColumnName="urunFiyat" />
+          <ScalarProperty Name="urunStok" ColumnName="urunStok" />
+          <ScalarProperty Name="urunMarka" ColumnName="urunMarka" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunID" ColumnName="urunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EbyxMarket", "EbyxMarket\EbyxMarket.csproj", "{9AEA65B1-8FB6-4A0E-9A5A-DAC85FF5DFC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AEA65B1-8FB6-4A0E-9A5A-DAC85FF5DFC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AEA65B1-8FB6-4A0E-9A5A-DAC85FF5DFC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AEA65B1-8FB6-4A0E-9A5A-DAC85FF5DFC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AEA65B1-8FB6-4A0E-9A5A-DAC85FF5DFC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09C1CE16-A09E-4C54-B1A9-76BA72A595FE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ebyxMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBLCalisan">
+    <Key>
+      <PropertyRef Name="calisanID" />
+    </Key>
+    <Property Name="calisanID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="calisanAd" Type="varchar" MaxLength="50" />
+    <Property Name="calisanSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="calisanYas" Type="int" />
+    <Property Name="calisanTelNo" Type="int" />
+    <Property Name="calisanKonum" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLKategori">
+    <Key>
+      <PropertyRef Name="kategoriID" />
+    </Key>
+    <Property Name="kategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kategoriAd" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLKullanici">
+    <Key>
+      <PropertyRef Name="kullaniciID" />
+    </Key>
+    <Property Name="kullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kullaniciAd" Type="varchar" MaxLength="50" />
+    <Property Name="kullaniciSifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLUrun">
+    <Key>
+      <PropertyRef Name="urunID" />
+    </Key>
+    <Property Name="urunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="urunAd" Type="varchar" MaxLength="50" />
+    <Property Name="urunMarka" Type="varchar" MaxLength="50" />
+    <Property Name="urunKategori" Type="varchar" MaxLength="50" />
+    <Property Name="urunStok" Type="int" />
+    <Property Name="urunFiyat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="kategoriAd" Type="int" />
+  </EntityType>
+  <Association Name="FK_TBLUrun_TBLKategori">
+    <End Role="TBLKategori" Type="Self.TBLKategori" Multiplicity="0..1" />
+    <End Role="TBLUrun" Type="Self.TBLUrun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKategori">
+        <PropertyRef Name="kategoriID" />
+      </Principal>
+      <Dependent Role="TBLUrun">
+        <PropertyRef Name="kategoriAd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ebyxMarketModelStoreContainer">
+    <EntitySet Name="TBLCalisan" EntityType="Self.TBLCalisan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLKategori" EntityType="Self.TBLKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLKullanici" EntityType="Self.TBLKullanici" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLUrun" EntityType="Self.TBLUrun" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLUrun_TBLKategori" Association="Self.FK_TBLUrun_TBLKategori">
+      <End Role="TBLKategori" EntitySet="TBLKategori" />
+      <End Role="TBLUrun" EntitySet="TBLUrun" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
